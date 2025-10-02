@@ -28,6 +28,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Logo } from "@/components/ui/logo";
+import Link from "next/link";
 
 interface Service {
   title: string;
@@ -38,27 +39,27 @@ interface Service {
 const SERVICES: Service[] = [
   {
     title: "Flat Roofing",
-    href: "/flat-roofing",
+    href: "/services/flat-roofing",
     icon: Home,
   },
   {
     title: "New Roof Installation",
-    href: "/new-roof-installation",
+    href: "/services/new-roof-installation",
     icon: HardHat,
   },
   {
     title: "Roof Repairs",
-    href: "/roof-repairs",
+    href: "/services/roof-repairs",
     icon: Wrench,
   },
   {
     title: "Sky Light Installation",
-    href: "/sky-light-installation",
+    href: "/services/sky-light-installation",
     icon: Sun,
   },
   {
     title: "Guttering Services",
-    href: "/guttering-services",
+    href: "/services/guttering-services",
     icon: Droplets,
   },
 ];
@@ -78,7 +79,9 @@ const Navbar7 = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-foreground">Services</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-foreground">
+                  Services
+                </NavigationMenuTrigger>
                 <NavigationMenuContent className="min-w-[400px] p-4 right-0">
                   <div className="grid gap-3">
                     {SERVICES.map((service, index) => (
@@ -118,6 +121,11 @@ const Navbar7 = () => {
                   <Button variant="ghost">FAQs</Button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/service-areas">
+                  <Button variant="ghost">Service Areas</Button>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             </NavigationMenuList>
             <div className="hidden items-center gap-4 lg:flex">
               <Button asChild>
@@ -126,7 +134,7 @@ const Navbar7 = () => {
             </div>
             <div className="flex items-center gap-4 lg:hidden">
               <Button
-              className="text-primary border-border"
+                className="text-primary border-border"
                 variant="outline"
                 size="icon"
                 aria-label="Main Menu"
@@ -146,9 +154,10 @@ const Navbar7 = () => {
 
           {/* Mobile Menu (Root) */}
           {open && (
-            <div className="border-border bg-background absolute inset-0 top-[72px] flex h-[calc(100vh-72px)] w-full flex-col overflow-scroll border-t lg:hidden text-primary-foreground">
+            <div className="border-border bg-background absolute inset-0 top-[72px] flex h-[calc(100vh-72px)] w-full flex-col overflow-scroll border-t lg:hidden text-foreground">
               <a
                 href="/"
+                onClick={() => setOpen(false)}
                 className="w-full border-b-2 border-border px-2 py-4 text-left text-sm font-medium"
               >
                 Home
@@ -158,7 +167,7 @@ const Navbar7 = () => {
                   value="services"
                   className="border-b-2 border-dashed"
                 >
-                  <AccordionTrigger className="px-2 py-4 text-left hover:no-underline border-b-2 border-border">
+                  <AccordionTrigger className="px-2 py-4 text-left hover:no-underline border-b-2 border-border text-foreground">
                     Services
                   </AccordionTrigger>
                   <AccordionContent className="px-2 pb-4">
@@ -167,6 +176,7 @@ const Navbar7 = () => {
                         <a
                           key={index}
                           href={service.href}
+                          onClick={() => setOpen(false)}
                           className="hover:bg-muted group flex items-center gap-4 rounded-lg p-2"
                         >
                           <div className="bg-muted rounded-lg p-2 shadow-sm">
@@ -183,34 +193,44 @@ const Navbar7 = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
-              <a
+              <Link
                 href="/about"
+                onClick={() => setOpen(false)}
                 className="w-full border-b-1 border-border px-2 py-4 text-left text-sm font-medium"
               >
                 About Us
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/gallery"
+                onClick={() => setOpen(false)}
                 className="w-full border-b-2 border-border  px-2 py-4 text-left text-sm font-medium"
               >
                 Gallery
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/testimonials"
+                onClick={() => setOpen(false)}
                 className="w-full border-b-2 border-border  px-2 py-4 text-left text-sm font-medium"
               >
                 Testimonials
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/faqs"
-                className="w-full border-b-2 border-dborder px-2 py-4 text-left text-sm font-medium"
+                onClick={() => setOpen(false)}
+                className="w-full border-b-2 border-border px-2 py-4 text-left text-sm font-medium"
               >
                 FAQs
-              </a>
-
-              <div className="mx-8 mt-auto flex flex-col gap-4 py-12">
+              </Link>
+              <Link
+                href="/service-areas"
+                onClick={() => setOpen(false)}
+                className="w-full border-b-2 border-border px-2 py-4 text-left text-sm font-medium"
+              >
+                Service Area
+              </Link>
+              <div className="mx-8 mb-16 mt-auto flex flex-col gap-4 py-12">
                 <Button className="relative" size="lg" asChild>
-                  <a href="/contact">Contact</a>
+                  <a href="/contact" onClick={() => setOpen(false)}>Contact</a>
                 </Button>
               </div>
             </div>

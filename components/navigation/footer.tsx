@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Logo } from "../ui/logo";
+
 const sitemap = [
   {
     title: "Navigation",
@@ -26,6 +29,10 @@ const sitemap = [
         title: "Contact",
         href: "/contact",
       },
+      {
+        title: "Service Areas",
+        href: "/service-areas",
+      },
     ],
   },
   {
@@ -33,23 +40,23 @@ const sitemap = [
     links: [
       {
         title: "Flat Roofing",
-        href: "/flat-roofing",
+        href: "/services/flat-roofing",
       },
       {
         title: "New Roof Installation",
-        href: "/new-roof-installation",
+        href: "/services/new-roof-installation",
       },
       {
         title: "Roof Repairs",
-        href: "/roof-repairs",
+        href: "/services/roof-repairs",
       },
       {
         title: "Skylight Installation",
-        href: "/sky-light-installation",
+        href: "/services/sky-light-installation",
       },
       {
         title: "Guttering Services",
-        href: "/guttering-services",
+        href: "/services/guttering-services",
       },
     ],
   },
@@ -63,7 +70,10 @@ const Footer = () => {
           <div className="relative mb-8 flex w-full flex-col gap-x-28 gap-y-8 md:flex-row md:justify-between md:gap-y-0">
             <div className="max-w-96">
               <div className="mb-6 flex items-center gap-3">
-                <h3 className="text-xl font-bold text-primary-foreground">Top Tier Roofing</h3>
+                <Logo />
+                <h3 className="text-xl font-bold text-foreground">
+                  <Link href={"/"}>Top Tier Roofing</Link>
+                </h3>
               </div>
               <p className="text-muted-foreground text-base font-medium">
                 Professional roofing services you can trust.

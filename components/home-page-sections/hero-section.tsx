@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Hero21 = () => {
   return (
-    <section className="border-b pt-12 mx-8 lg:mx-auto lg:min-w-4/5 bg-card rounded-lg shadow-2xl">
+    <section className="border-b pt-12 mx-8 my-8 lg:mx-auto lg:min-w-4/5 bg-card rounded-lg shadow-2xl">
       <div className="container">
         <div className="relative pb-16">
           <div className="absolute inset-x-0 top-0 -z-10 flex h-full w-full items-center justify-start  opacity-100" />

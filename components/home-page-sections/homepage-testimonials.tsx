@@ -63,7 +63,7 @@ const Testimonial6 = () => {
                 className="basis-full md:basis-1/2 lg:basis-1/3"
               >
                 <div className="h-full p-1">
-                  <div className="flex h-full flex-col justify-between rounded-lg border p-6 bg-card shadow-2xl">
+                  <div className="flex h-full flex-col justify-between rounded-lg border p-6 bg-background shadow-2xl">
                     <q className="leading-7 text-foreground/70">
                       {testimonial.content}
                     </q>

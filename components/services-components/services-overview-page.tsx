@@ -158,7 +158,7 @@ const Services10 = () => {
                       <h4 className="mb-3 text-sm font-medium text-muted-foreground">
                         What's included:
                       </h4>
-                      <ul className="space-y-2 text-primary-foreground">
+                      <ul className="space-y-2 text-foreground">
                         {service.items.map((item, itemIndex) => (
                           <li
                             key={itemIndex}
@@ -218,7 +218,7 @@ const Services10 = () => {
           </div>
 
           <div className="bg-background rounded-xl border p-8 text-left">
-            <h3 className="mb-2 text-xl font-semibold text-primary-foreground">
+            <h3 className="mb-2 text-xl font-semibold text-foreground">
               Need a custom roofing solution?
             </h3>
             <p className="text-muted-foreground mb-6">
@@ -228,7 +228,7 @@ const Services10 = () => {
               size="lg"
               className="from-primary to-primary/80 bg-gradient-to-r"
             >
-              Get Free Quote
+              Contact Us
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
