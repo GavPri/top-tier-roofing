@@ -10,7 +10,7 @@ interface ComingSoonProps {
 
 export function ComingSoon({
   title = "Under Construction",
-  description = "We're building something amazing. This section is currently under construction and will be ready soon.",
+  description = "We're building something amazing. This section is currently under construction and will be ready for you soon.",
   showEmailSignup = false,
 }: ComingSoonProps) {
   return (
