@@ -71,9 +71,6 @@ const Footer = () => {
             <div className="max-w-96">
               <div className="mb-6 flex items-center gap-3">
                 <Logo />
-                <h3 className="text-xl font-bold text-foreground">
-                  <Link href={"/"}>Top Tier Roofing</Link>
-                </h3>
               </div>
               <p className="text-muted-foreground text-base font-medium">
                 Professional roofing services you can trust.
