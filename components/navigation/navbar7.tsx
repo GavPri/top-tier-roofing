@@ -67,7 +67,7 @@ const Navbar7 = () => {
   const [open, setOpen] = useState(false);
   return (
     <section className="bg-background sticky inset-x-0 top-0 z-20 rounded-b-2xl">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-42 xl:px-48">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <NavigationMenu className="min-w-full">
           <div className="flex w-full items-center justify-between gap-12 py-4">
             <Logo />

@@ -1,4 +1,4 @@
-import { ChevronRight, Play } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -21,22 +21,24 @@ const Hero21 = () => {
               <ChevronRight className="mt-0.5 size-4 shrink-0" />
             </p>
           </Link>
-          <h1 className="pl-4 mx-auto my-5 max-w-5xl text-left text-3xl text-balance md:text-5xl text-card-foreground">
+          <h1 className="pl-4 mx-auto my-5 max-w-5xl text-left md:text-center text-3xl text-balance md:text-5xl text-card-foreground">
             Trusted Roofers Serving London Since 1995
           </h1>
-          <p className="pl-4 mx-auto max-w-3xl text-left text-sm text-muted-foreground md:text-base">
+          <p className="pl-4 mx-auto max-w-3xl text-left text-sm text-muted-foreground md:text-center">
             A family-owned, fully insured roofing company with over 500 happy
             customers. We offer free estimates, a 10-year guarantee, and require
             no deposit. Trading Standards approved with emergency call-outs
             available.
           </p>
           <div className="ml-5 mt-8 flex flex-col md:flex-row items-start justify-center gap-3">
-            <Button className="w-full md:w-fit">
+            <Button className="w-4/5 md:w-fit">
               Call Now <ChevronRight className="ml-2 size-4" />
             </Button>
-            <Button className="w-full md:w-fit" variant="outline">
-              <Play className="mr-2 size-4" />
-              Services
+            <Button className="w-4/5 md:w-fit" variant="outline" asChild>
+              <Link href={"/services"}>
+                Services
+                <ChevronRight className="mr-2 size-4" />
+              </Link>
             </Button>
           </div>
         </div>
