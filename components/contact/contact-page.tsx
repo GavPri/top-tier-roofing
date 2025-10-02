@@ -128,7 +128,7 @@ const Contact11 = () => {
 
         <div className="mt-8 flex gap-10 lg:gap-30 flex-col md:flex-row md:mt-12 md:divide-x">
           {/* Contact Information */}
-          <div className="space-y-10 md:pr-10 md:gap-20 order-1">
+          <div className="space-y-10 md:pr-10 md:gap-20 order-2 md:order-1">
             <div>
               <h2 className="text-lg font-semibold text-foreground">Office</h2>
               <p className="mt-3 font-medium tracking-tight text-muted-foreground">
@@ -175,7 +175,7 @@ const Contact11 = () => {
           </div>
 
           {/* Inquiry Form */}
-          <div className="flex-1 order-2 md:order-2">
+          <div className="flex-1 order-1 md:order-2">
             <h2 className="text-lg font-semibold text-foreground">
               Request a Free Estimate
             </h2>
