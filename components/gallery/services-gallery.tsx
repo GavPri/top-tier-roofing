@@ -107,7 +107,7 @@ export function ServicesGallery({
   return (
     <div className="w-full">
       {/* Category Filter */}
-      <div className="flex flex-wrap gap-2 mb-12 justify-center">
+      <div className="flex flex-wrap gap-2 mb-12 justify-start md:justify-center">
         {categories.map((category) => (
           <button
             key={category}

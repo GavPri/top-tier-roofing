@@ -14,7 +14,7 @@ export default function GalleryPage() {
     <main className="min-h-screen bg-background max-w-9/10 mx-auto lg:min-w-4/5 flex flex-col items-center justify-evenly">
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-4 md:py-8">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+        <div className="max-w-4xl mx-auto space-y-6">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-light text-foreground text-balance leading-tight">
             Our Work
           </h1>
