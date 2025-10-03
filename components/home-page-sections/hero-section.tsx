@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Phone } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,7 +17,7 @@ const Hero21 = () => {
           >
             <Badge className="hidden sm:block">25+ Years Experience</Badge>
             <p className="flex items-center gap-1 text-sm text-muted-foreground">
-              <Link href={'/testimonials'}>Read our customer reviews here</Link>
+              <Link href={"/testimonials"}>Read our customer reviews here</Link>
               <ChevronRight className="mt-0.5 size-4 shrink-0" />
             </p>
           </Link>
@@ -31,8 +31,15 @@ const Hero21 = () => {
             available.
           </p>
           <div className="ml-5 mt-8 flex flex-col md:flex-row items-start justify-center gap-3">
-            <Button className="w-4/5 md:w-fit">
-              Call Now <ChevronRight className="ml-2 size-4" />
+            <Button className="w-4/5 md:w-fit md:hidden" asChild>
+              <Link href="tel:+1234567890">
+                Call Now <Phone className="ml-2 size-4" size={"xl"} />
+              </Link>
+            </Button>
+            <Button className="hidden md:flex md:w-fit">
+              <Link href={"/contact"}>
+                Contact Us 
+              </Link>
             </Button>
             <Button className="w-4/5 md:w-fit" variant="outline" asChild>
               <Link href={"/services"}>
