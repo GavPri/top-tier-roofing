@@ -39,8 +39,10 @@ const Services11 = () => {
               deliver quality workmanship that stands the test of time.
             </p>
           </div>
-          <Button variant="default" className="mt-8 w-fit">
-            View all services <ArrowUpRight className="ml-2 h-4 w-4" />
+          <Button variant="secondary" className="mt-8 w-fit" asChild>
+            <Link href={"/services"}>
+              View all services <ArrowUpRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
 
