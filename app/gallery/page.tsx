@@ -4,9 +4,10 @@ import { ArrowLeft } from "lucide-react";
 import { ServicesGallery } from "@/components/gallery/services-gallery";
 
 export const metadata = {
-  title: 'Our Work Gallery - Roofing Projects in London',
-  description: 'View our portfolio of completed roofing projects. See the quality and craftsmanship that sets us apart.',
-}
+  title: "Our Work Gallery - Roofing Projects in London",
+  description:
+    "View our portfolio of completed roofing projects. See the quality and craftsmanship that sets us apart.",
+};
 
 export default function GalleryPage() {
   return (
@@ -40,14 +41,22 @@ export default function GalleryPage() {
             expert craftsmanship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="text-base">
-              <span className="hidden md:block">Contact Us</span>
-              <span className="md:hidden">Call Us</span>
+            <Button size="lg" className="text-base hidden md:flex md:justify-center" asChild>
+              <Link href={"/contact"} className="hidden md:block">
+                Contact Us
+              </Link>
             </Button>
+            <Button asChild className="md:hidden flex items-center justify-center" variant={'default'} size={'lg'}>
+              <Link href={"tel:+12345678"}>
+                Call Us
+              </Link>
+            </Button>
+
             <Button
               size="lg"
               variant="outline"
               className="text-base bg-transparent"
+              asChild
             >
               View Services
             </Button>
