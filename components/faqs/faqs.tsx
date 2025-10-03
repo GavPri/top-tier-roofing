@@ -103,59 +103,72 @@ const faqs = {
 
 const Faq8 = () => {
   return (
-    <section className="py-32 bg-background">
+    <section className="my-4 md:my-8 bg-background">
       <div className="container">
         <h2 className="mb-8 text-3xl font-semibold md:mb-11 md:text-5xl text-foreground">
-          Frequently asked questions at <span className="text-primary">Top Tier Roofing</span>
+          Frequently asked questions at{" "}
+          <span className="text-primary">Top Tier Roofing</span>
         </h2>
         <div className="grid gap-4 border-t pt-4 md:grid-cols-3 md:gap-10">
-          <h3 className="text-xl font-medium text-primary">General</h3>
+          <h3 className="text-2xl font-medium text-foreground">General</h3>
           <Accordion type="multiple" className="md:col-span-2">
             {faqs.general.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="text-left text-foreground">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
         <div className="mt-10 grid gap-4 border-t pt-4 md:grid-cols-3 md:gap-10">
-          <h3 className="text-xl font-medium text-primary">Services</h3>
+          <h3 className="text-2xl font-medium text-foreground">Services</h3>
           <Accordion type="multiple" className="md:col-span-2">
             {faqs.services.map((faq, index) => (
               <AccordionItem key={index} value={`services-${index}`}>
                 <AccordionTrigger className="text-left text-foreground">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
         <div className="mt-10 grid gap-4 border-t pt-4 md:grid-cols-3 md:gap-10">
-          <h3 className="text-xl font-medium text-primary">Pricing & Payment</h3>
+          <h3 className="text-2xl font-medium text-foreground">
+            Pricing & Payment
+          </h3>
           <Accordion type="multiple" className="md:col-span-2">
             {faqs.pricing.map((faq, index) => (
               <AccordionItem key={index} value={`pricing-${index}`}>
-                <AccordionTrigger  className="text-foreground text-left">
+                <AccordionTrigger className="text-foreground text-left borber-b border-border">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-muted-foreground ">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
         <div className="mt-10 grid gap-4 border-t pt-4 md:grid-cols-3 md:gap-10">
-          <h3 className="text-xl font-medium text-primary">Guarantees & Warranties</h3>
+          <h3 className="text-xl font-medium text-foreground">
+            Guarantees & Warranties
+          </h3>
           <Accordion type="multiple" className="md:col-span-2">
             {faqs.guarantees.map((faq, index) => (
               <AccordionItem key={index} value={`guarantees-${index}`}>
                 <AccordionTrigger className=" text-foreground text-left">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
