@@ -17,7 +17,7 @@ const Hero21 = () => {
           >
             <Badge className="hidden sm:block">25+ Years Experience</Badge>
             <p className="flex items-center gap-1 text-sm text-muted-foreground">
-              Read our customer reviews here
+              <Link href={'/testimonials'}>Read our customer reviews here</Link>
               <ChevronRight className="mt-0.5 size-4 shrink-0" />
             </p>
           </Link>
