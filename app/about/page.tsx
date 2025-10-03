@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto">
           <div className="aspect-[16/10] bg-muted rounded-lg overflow-hidden relative">
             <Image
-            fill
+              fill
               src="/images/about/about-us.jpg"
               alt="Top Tier Roofing team at work"
               className="w-full h-full object-cover"
@@ -120,15 +120,16 @@ export default function AboutPage() {
             Get in touch with our team for a free consultation and estimate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="text-base">
-              Contact Us
+            <Button size="lg" className="text-base" asChild>
+              <Link href={"/contact"}>Contact Us</Link>
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
               className="text-base bg-transparent lg:hidden"
             >
-              Call (555) 123-4567
+              <Link href={'tel:+123456789'}>Call (123) 456-7890</Link>
             </Button>
           </div>
         </div>
