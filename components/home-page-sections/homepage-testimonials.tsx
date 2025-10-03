@@ -6,6 +6,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRightFromLine, ArrowUpRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -87,6 +90,11 @@ const Testimonial6 = () => {
             ))}
           </CarouselContent>
         </Carousel>
+        <div className="mt-8 flex justify-start">
+          <Button variant="ghost" asChild>
+            <Link href="/testimonials">View All Testimonials <ArrowUpRight/></Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
