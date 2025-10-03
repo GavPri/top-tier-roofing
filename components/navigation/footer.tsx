@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { Logo } from "../ui/logo";
+import { ThemeToggleSwitch } from "../mode-toggle";
 
 const sitemap = [
   {
@@ -64,7 +66,7 @@ const sitemap = [
 
 const Footer = () => {
   return (
-    <section className="pt-16 max-w-4/5 mx-auto">
+    <section className="py-16 max-w-4/5 mx-auto">
       <div className="container">
         <footer>
           <div className="relative mb-8 flex w-full flex-col gap-x-28 gap-y-8 md:flex-row md:justify-between md:gap-y-0">
@@ -75,6 +77,7 @@ const Footer = () => {
               <p className="text-muted-foreground text-base font-medium">
                 Professional roofing services you can trust.
               </p>
+              <ThemeToggleSwitch/>
             </div>
             <div className="flex flex-col items-start gap-x-20 gap-y-14 xl:flex-row">
               <div className="inline-grid w-fit grid-cols-1 gap-x-20 gap-y-14 sm:grid-cols-2">
@@ -86,12 +89,12 @@ const Footer = () => {
                     <ul className="text-muted-foreground space-y-3 text-base font-medium">
                       {section.links.map((link) => (
                         <li key={link.title}>
-                          <a
+                          <Link
                             href={link.href}
                             className="hover:text-accent-foreground whitespace-nowrap text-base"
                           >
                             {link.title}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -105,12 +108,12 @@ const Footer = () => {
               &copy; Top Tier Roofing 2025
             </div>
             <div className="text-muted-foreground flex flex-col items-start gap-4 text-xs sm:text-sm md:flex-row lg:items-center">
-              <a href="#" className="hover:text-accent-foreground">
+              <Link href="#" className="hover:text-accent-foreground">
                 Terms & Conditions
-              </a>
-              <a href="#" className="hover:text-accent-foreground">
+              </Link>
+              <Link href="#" className="hover:text-accent-foreground">
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </div>
         </footer>

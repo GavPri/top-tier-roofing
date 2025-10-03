@@ -1,15 +1,7 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
-import {
-  Home,
-  Wrench,
-  HardHat,
-  Menu,
-  Droplets,
-  Sun,
-  X,
-} from "lucide-react";
+import { Home, Wrench, HardHat, Menu, Droplets, Sun, X } from "lucide-react";
 import { useState } from "react";
 
 import {
@@ -29,6 +21,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Logo } from "@/components/ui/logo";
 import Link from "next/link";
+import { ThemeToggleSwitch } from "../mode-toggle";
+
 
 interface Service {
   title: string;
@@ -72,6 +66,7 @@ const Navbar7 = () => {
         <NavigationMenu className="min-w-full">
           <div className="flex w-full items-center justify-between gap-12 py-4">
             <Logo />
+
             <NavigationMenuList className="hidden lg:flex">
               <NavigationMenuItem>
                 <NavigationMenuLink href="/">
@@ -126,6 +121,7 @@ const Navbar7 = () => {
                   <Button variant="ghost">Service Areas</Button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
+              <ThemeToggleSwitch/>
             </NavigationMenuList>
             <div className="hidden items-center gap-4 lg:flex">
               <Button asChild>
@@ -228,9 +224,12 @@ const Navbar7 = () => {
               >
                 Service Area
               </Link>
+              <ThemeToggleSwitch/>
               <div className="mx-8 mb-16 mt-auto flex flex-col gap-4 py-12">
                 <Button className="relative" size="lg" asChild>
-                  <a href="/contact" onClick={() => setOpen(false)}>Contact</a>
+                  <a href="/contact" onClick={() => setOpen(false)}>
+                    Contact
+                  </a>
                 </Button>
               </div>
             </div>
