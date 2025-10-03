@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const logos = [
   {
@@ -57,9 +58,9 @@ const Logos2 = () => {
                 members of leading industry bodies, ensuring every project meets
                 the highest safety and quality standards.
               </p>
-              <Button className="w-full md:w-fit">
-                <ArrowRight className="mr-2 size-5" />
-                Get in touch
+              <Button className="w-full md:w-fit " asChild>
+                <Link href={"/contact"}>Get in touch<ArrowRight className="mr-2 size-5" /></Link>
+                
               </Button>
             </div>
           </div>
