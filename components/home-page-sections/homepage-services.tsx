@@ -15,12 +15,12 @@ const services: ServiceProps[] = [
   {
     title: "Flat Roofing",
     image: "/images/flat-roof-services.jpg",
-    url: "/flat-roofing",
+    url: "/services/flat-roofing",
   },
   {
     title: "New Roof Installation",
     image: "/images/new-roof-services.jpg",
-    url: "/new-roof-installation",
+    url: "/services/new-roof-installation",
   },
 ];
 
